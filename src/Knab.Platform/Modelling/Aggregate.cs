@@ -9,7 +9,7 @@ public abstract class Aggregate<TIdentity> : IAggregate
     public TIdentity Id { get; protected set; }
     public IReadOnlyCollection<IDomainEvent> Events => _events;
 
-    public Aggregate()
+    protected Aggregate()
     {
         _events = new List<IDomainEvent>();
     }
